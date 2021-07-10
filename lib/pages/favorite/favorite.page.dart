@@ -16,7 +16,7 @@ class _FavoritePageState extends State<FavoritePage> {
       ),
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-        child: PersonalList(dataList: [1,2,3],),
+        // child: PersonalList(dataList: [1,2,3],),
       ),
       bottomNavigationBar: BottomNav(
         currentIndex: 1,

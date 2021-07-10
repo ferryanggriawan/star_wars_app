@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:star_wars_app/models/person.model.dart';
 
 class PersonalList extends StatelessWidget {
   PersonalList({Key key, this.dataList}) : super(key: key);
 
-  final List<dynamic> dataList;
+  final List<PersonModel> dataList;
 
   @override
   Widget build(BuildContext context) {
@@ -11,8 +12,8 @@ class PersonalList extends StatelessWidget {
       itemBuilder: (context, index) {
         return ListTile(
           dense: true,
-          title: Text("Title"),
-          subtitle: Text("Sub Title"),
+          title: Text(dataList.elementAt(index).name),
+          subtitle: Text(dataList.elementAt(index).gender),
         );
       },
       separatorBuilder: (context, index) {

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:star_wars_app/models/person.model.dart';
 
 class PersonalGrid extends StatelessWidget {
   PersonalGrid({Key key, this.dataList}) : super(key: key);
 
-  final List<dynamic> dataList;
+  final List<PersonModel> dataList;
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +17,12 @@ class PersonalGrid extends StatelessWidget {
       ),
       itemCount: dataList.length,
       itemBuilder: (context, index) {
-        return ListTile(
-          title: Text("Title"),
-          subtitle: Text("Sub Title"),
+        return Card(
+          elevation: 1,
+          child: ListTile(
+            title: Text(dataList.elementAt(index).name),
+            subtitle: Text(dataList.elementAt(index).gender),
+          ),
         );
       },
     );
