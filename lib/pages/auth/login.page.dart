@@ -12,7 +12,8 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          child: RaisedButton(
+          alignment: Alignment.center,
+          child: RaisedButton(  
             child: Text("Login With Google"),
             onPressed: () {
               MyRouter.navigator.currentState.pushReplacementNamed('/home');

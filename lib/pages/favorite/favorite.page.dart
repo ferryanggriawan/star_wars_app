@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:star_wars_app/widgets/app/bottom.nav.dart';
+import 'package:star_wars_app/widgets/personal/personal.list.dart';
 
 class FavoritePage extends StatefulWidget {
   @override
@@ -12,7 +14,13 @@ class _FavoritePageState extends State<FavoritePage> {
       appBar: AppBar(
         title: Text("Favorite"),
       ),
-      body: Container(),
+      body: Container(
+        padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+        child: PersonalList(dataList: [1,2,3],),
+      ),
+      bottomNavigationBar: BottomNav(
+        currentIndex: 1,
+      ),
     );
   }
 }
